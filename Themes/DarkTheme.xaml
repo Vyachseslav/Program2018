@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Kachatel2018.Themes">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Kachatel2018;component/Styles/WindowStyles.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Kachatel2018;component/Styles/Dark/Colors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Kachatel2018;component/Styles/Buttons.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Kachatel2018;component/Styles/WindowMainPanel.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Kachatel2018;component/Styles/ProgressBarStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Kachatel2018;component/Styles/Fonts.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Kachatel2018;component/Styles/Dark/MainMenu.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Kachatel2018;component/Styles/Dark/CheckBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Kachatel2018;component/Styles/ScrollViewer.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Kachatel2018;component/Styles/Expander.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Kachatel2018;component/Styles/TreeViewLikeWindowForms.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

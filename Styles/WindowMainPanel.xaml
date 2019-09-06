@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Kachatel2018.Styles">
+    
+    <!-- Стиль для главной панели главного окна. -->
+    <Style TargetType="{x:Type Grid}" x:Key="MainWindowUpperPanel">
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="Background" Value="{DynamicResource GridBackgroundColor}" />
+    </Style>
+    
+</ResourceDictionary>

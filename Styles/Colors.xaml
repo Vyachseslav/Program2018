@@ -1,0 +1,123 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Kachatel2018.Styles">
+
+    <!-- Цвета для окон Window. -->
+    <SolidColorBrush x:Key="BackgroundMainWindow" Color="White"     />
+    
+    <!-- Цвета кнопок свернуть, развернуть, закрыть. -->
+    <SolidColorBrush x:Key="MinimizeButtonColor" Color="Green"     />
+    <SolidColorBrush x:Key="MaximizeButtonColor" Color="#FFF5F576" />
+    <SolidColorBrush x:Key="CloseButtonColor"    Color="#FFF32C0D" />
+    <SolidColorBrush x:Key="FillButtonColor"     Color="LightGray" />
+    
+    <!-- Цвет главной панели окна. -->
+    <SolidColorBrush x:Key="GridBackgroundColor" Color="#6289a8" />
+
+    <!-- Цвета для шаблона ButtonForMenuTemplate. -->
+    <SolidColorBrush x:Key="TemplateContentForeground"           Color="WhiteSmoke" />
+    <SolidColorBrush x:Key="TemplateContentBorderBrushMouseOver" Color="Orange" />
+    <SolidColorBrush x:Key="TemplateContentBorderBrushPressed"   Color="Black" />
+
+    <!-- Цвета для кнопок в StackPanel. -->
+    <!--<SolidColorBrush x:Key="TemplateBorderBackground"      Color="#6289a8" />-->
+    <SolidColorBrush x:Key="TemplateBorderBackground"      Color="Transparent" />
+    <SolidColorBrush x:Key="ContentForeground"             Color="Black" />
+    <SolidColorBrush x:Key="ContentBackgroundMouseOver"    Color="#f1f1f1" />
+    <SolidColorBrush x:Key="ContentBackgroundNotMouseOver" Color="Transparent" />
+    <SolidColorBrush x:Key="ContentBackgroundPressed"      Color="#c1c1c1" />
+    <SolidColorBrush x:Key="ContentBorderColor"            Color="Orange" />
+
+    <!-- Цвета для кнопки ToggleButton открытия главного меню. -->
+    <SolidColorBrush x:Key="ToggleButtonBorderBrushMouseOver" Color="Orange" />
+    <SolidColorBrush x:Key="ToggleButtonBorderBrushPressed"   Color="Black" />
+    <SolidColorBrush x:Key="ToggleButtonFillColor"            Color="White" />
+
+    <!-- Цвета для панели главного меню. -->
+    <SolidColorBrush x:Key="ShadowColor"        Color="Silver" />
+    <SolidColorBrush x:Key="MainMenuTitleColor" Color="#6289a8" />
+    <SolidColorBrush x:Key="MenuBorderColor"    Color="Gray" />
+
+    <!-- Цвет диалоговых окон. -->
+    <SolidColorBrush x:Key="GridDialogBackgroundColor" Color="White" />
+    
+    <!-- Заголвоки текстов на диалоговых окнах. -->
+    <SolidColorBrush x:Key="ForegroundTitleDialogText" Color="#404040" />
+    <SolidColorBrush x:Key="ForegroundTextDialogText" Color="Gray" />
+
+    <!-- Цвета кнопок в диалоговых окнах. -->
+    <SolidColorBrush x:Key="ForegroundButtonDialoFormDefault" Color="#168acd" />
+    <SolidColorBrush x:Key="ForegroundCancelButtonDialoFormDefault" Color="Red" />
+    <SolidColorBrush x:Key="BackgroundButtonDialoFormDefault" Color="#f1f1f1" />
+    <SolidColorBrush x:Key="BackgroundPressedButtonDialoFormDefault" Color="#c1c1c1" />
+    <SolidColorBrush x:Key="BackgroundMouseOverButtonDialoFormDefault" Color="Transparent" />
+    
+    
+    
+    <!-- Список цветов BorderBrush. -->
+    <SolidColorBrush x:Key="WindowBorderColor" Color="LightGray" />
+    
+    <SolidColorBrush x:Key="ToggleButtonBackgroundColor" Color="#FF164F7C" />
+    
+    <!-- Цвета кнопок -->
+    <SolidColorBrush x:Key="MainButtonBackgroundColor" Color="#6289a8" />
+    <!--<SolidColorBrush x:Key="ControlButtonBackgroundColor" Color="#FF6998BF" />-->
+
+
+    <!-- Цвета кнопок управления окном. -->
+    <SolidColorBrush x:Key="WindowControlButtonBackgroundColor" Color="Transparent" />
+
+    <!-- Цвета для ScrollBar. -->
+    <!-- – Brushes used in Styling of ScrollViewer 
+    <SolidColorBrush x:Key="StandardBorderBrush" Color="#888" />
+    <SolidColorBrush x:Key="StandardBackgroundBrush" Color="#FFF" />
+    <SolidColorBrush x:Key="HoverBorderBrush" Color="#DDD" />
+    <SolidColorBrush x:Key="SelectedBackgroundBrush" Color="Gray" />
+    <SolidColorBrush x:Key="SelectedForegroundBrush" Color="White" />
+    <SolidColorBrush x:Key="DisabledForegroundBrush" Color="#888" />
+    <SolidColorBrush x:Key="NormalBrush" Color="#888" />
+    <SolidColorBrush x:Key="NormalBorderBrush" Color="#888" />
+    <SolidColorBrush x:Key="HorizontalNormalBrush" Color="#888" />
+    <SolidColorBrush x:Key="HorizontalNormalBorderBrush" Color="#888" />
+    <SolidColorBrush x:Key="GlyphBrush" Color="#444" />
+    <LinearGradientBrush x:Key="ListBoxBackgroundBrush" StartPoint="0,0" EndPoint="1,0.001">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="White" Offset="0.0" />
+                <GradientStop Color="White" Offset="0.6" />
+                <GradientStop Color="#DDDDDD" Offset="1.2"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="StandardBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#FFF" Offset="0.0"/>
+                <GradientStop Color="#CCC" Offset="1.0"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PressedBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#FF82A8EA" Offset="0.958"/>
+                <GradientStop Color="#FF3577EA" Offset="0.674"/>
+                <GradientStop Color="#FF3577EA" Offset="0.351"/>
+                <GradientStop Color="#FF82A8EA" Offset="0.092"/>
+                <GradientStop Color="#FF2663CD" Offset="0.502"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>-->
+    
+    
+    <!-- Expander -->
+    <SolidColorBrush x:Key="ExpanderBorderBrush" Color="#6289a8" />
+    <SolidColorBrush x:Key="ExpanderForeground" Color="Black" />
+    <SolidColorBrush x:Key="ExpanderBackGround" Color="Transparent" />
+    
+    <!-- ScrollViewer -->
+    <SolidColorBrush x:Key="ScrollBorderBrush" Color="Red" />
+
+    <SolidColorBrush x:Key="BackgroundMainMenu" Color="White" />
+
+</ResourceDictionary>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="Kachatel2018.View.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kachatel2018.View"
+        mc:Ignorable="d"
+        Title="Настройки" 
+        Height="400" Width="400" 
+        WindowStartupLocation="CenterOwner"
+        Style="{DynamicResource DialogWindowStyle}">
+    <Window.Effect>
+        <DropShadowEffect ShadowDepth="3" Color="LightBlue" BlurRadius="15"></DropShadowEffect>
+    </Window.Effect>
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,10,0,0" 
+                   Height="58" Width="232"
+                   TextWrapping="WrapWithOverflow"   
+                   Text="Настройки приложения Качатель 2018"
+                   Foreground="{DynamicResource ForegroundTitleDialogText}" 
+                   FontSize="18"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="20,86,0,0" TextWrapping="WrapWithOverflow" VerticalAlignment="Top"
+                   Text="Тема оформления" 
+                   Foreground="{DynamicResource ForegroundTextDialogText}" />
+        
+        <ComboBox x:Name="styleBox" HorizontalAlignment="Left" Margin="126,83,0,0" VerticalAlignment="Top" Width="150"/>
+
+        <Button Name="btnAddUser" Content="Apply" HorizontalAlignment="Right" Margin="0,0,20,10" VerticalAlignment="Bottom" 
+                Template="{DynamicResource ButtonForDialogForms}" 
+                IsDefault="True" 
+                Click="BtnAddUser_Click" />
+
+        <!--<Button Name="btnClose" Content="Cancel" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,100,10" 
+                Template="{DynamicResource CancelButtonForDialogForms}" 
+                IsCancel="True" />-->
+    </Grid>
+</Window>

@@ -1,0 +1,173 @@
+﻿<Window x:Class="Kachatel2018.View.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kachatel2018.View"
+        xmlns:viewmodel="clr-namespace:Kachatel2018.ViewModel"
+        xmlns:view="clr-namespace:Kachatel2018.View.Helper"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        mc:Ignorable="d"
+        Title="Справка" 
+        Height="370" Width="787"
+        >
+    <Window.DataContext>
+        <viewmodel:BaseViewModel x:Name="BaseViewModel" />
+    </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewmodel:IntroduceViewModel}">
+            <view:IntroduceView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:WhatDoViewModel}">
+            <view:WhatDoView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:GetExcelFilesViewModel}">
+            <view:GetExcelFilesView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:FirstCheckDataViewModel}">
+            <view:FirstCheckDataView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:Merge_ExcelViewModel}">
+            <view:Merge_ExcelView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:PreparationForLoadDBViewModel}">
+            <view:PreparationForLoadDBView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:ConvertationIntoDatabaseViewModel}">
+            <view:ConvertationIntoDatabaseView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:LastStepAfterLoadingViewModel}">
+            <view:LastStepAfterLoadingView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:DoMergeViewModel}">
+            <view:DoMergeView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:TabRazrabViewModel}">
+            <view:TabRazrabView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:FastInsertPassportIdIntoExcelViewModel}">
+            <view:FastInsertPassportIdIntoExcelView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:RecoveryBackupIntoMETR6ViewModel}">
+            <view:RecoveryBackupIntoMETR6View />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodel:CreateBackupDatabaseViewModel}">
+            <view:CreateBackupDatabaseView />
+        </DataTemplate>
+
+    </Window.Resources>
+    
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*" MinWidth="50"/>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition MinWidth="50"/>
+        </Grid.ColumnDefinitions>
+        
+        <TreeView Grid.Column="0" >
+            <TreeViewItem Header="Основные действия" IsExpanded="True">
+                <TreeViewItem Header="Введение" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="Introduce" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Доработка" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="WhatDo" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Прислали файлы. Что делать" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="GetExcelFiles" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Первичная проверка" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="FirstCheckData" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Объединение Excel-файлов" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="Merge_Excel" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Подготовка данных к закачке" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="PreparationForLoadDB" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Конвертация данных в базу АСУ МС" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="ConvertationIntoDatabase" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Завершение работы по конвертации" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="LastStepAfterLoading" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Описание процесса слияния (докачки данных)" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="DoMerge" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="Дополнительно">
+                <TreeViewItem Header="Как включить вкладку «Разработчик» в Excel" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="TabRazrab" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Как быстро проставить номера паспортов в Excel" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="FastInsertPassportIdIntoExcel" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Восстановление бэкапа" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="RecoveryBackupIntoMETR6" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Создание бэкапа базы данных" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDoubleClick">
+                            <i:InvokeCommandAction Command="{Binding NavigationCommand}" CommandParameter="CreateBackupDatabase" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+            </TreeViewItem>
+        </TreeView>
+
+        <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="1" Background="DarkSlateGray"/>
+
+        <Grid Grid.Column="2">
+            <ContentControl Content="{Binding CurrentViewModel}" BorderBrush="Lime" BorderThickness="2"/>
+        </Grid>
+    </Grid>
+</Window>
